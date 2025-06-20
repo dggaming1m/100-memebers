@@ -364,7 +364,7 @@ def main():
     app.add_handler(CommandHandler("resetstats", resetstats))
     app.add_handler(CommandHandler("banuser", banuser))
     app.add_handler(CallbackQueryHandler(button))
-    app.add_handler(MessageHandler(filters.Regex(r"https?://t\.me/.*")  # raw string to avoid escape warning) & ~filters.COMMAND, handle_channel_link))  # Handle only valid links
+      # raw string to avoid escape warning) & ~filters.COMMAND, handle_channel_link))  # Handle only valid links
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_keyboard_input))  # Handle keyboard input
 
     print("Bot is running...")
